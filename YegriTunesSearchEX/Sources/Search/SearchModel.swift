@@ -12,12 +12,12 @@ struct SearchModel: Decodable {
     let results: [Results]
     
     struct Results: Decodable {
-        let artistId: Int // 저자 아이디
-        let artistName: String // 저자 이름
-        let collectionName: String // 책 이름
-        let artworkUrl100: String // 표지 이미지 
-        let primaryGenreName: String // 장르
-        let description: String // 줄거리
-        let previewUrl: String // 미리듣기 링크
+        let artistId: Int
+        let artistName: String
+        let collectionName: String
+        let artworkUrl100: String
+        let primaryGenreName: String
+        let description: String
+        let previewUrl: String
     }
 }

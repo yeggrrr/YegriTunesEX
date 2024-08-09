@@ -22,6 +22,7 @@
 		68CED2BA2C65D64B0043266A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2B92C65D64B0043266A /* SearchViewModel.swift */; };
 		68CED2BC2C65D65D0043266A /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2BB2C65D65D0043266A /* SearchModel.swift */; };
 		68CED2BF2C65DBDB0043266A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2BE2C65DBDB0043266A /* NetworkManager.swift */; };
+		68CED2C22C65FC8D0043266A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 68CED2C12C65FC8D0043266A /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68CED2C22C65FC8D0043266A /* Kingfisher in Frameworks */,
 				68CED2A52C65C0E60043266A /* RxSwift in Frameworks */,
 				68CED2A32C65C0E60043266A /* RxCocoa in Frameworks */,
 				68CED2A02C65C0D60043266A /* SnapKit in Frameworks */,
@@ -114,8 +116,8 @@
 		68CED2AD2C65C98F0043266A /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				68CED2BB2C65D65D0043266A /* SearchModel.swift */,
 				68CED28E2C65C0220043266A /* SearchViewController.swift */,
+				68CED2BB2C65D65D0043266A /* SearchModel.swift */,
 				68CED2B32C65D3770043266A /* SearchCell.swift */,
 				68CED2B92C65D64B0043266A /* SearchViewModel.swift */,
 			);
@@ -159,6 +161,7 @@
 				68CED29F2C65C0D60043266A /* SnapKit */,
 				68CED2A22C65C0E60043266A /* RxCocoa */,
 				68CED2A42C65C0E60043266A /* RxSwift */,
+				68CED2C12C65FC8D0043266A /* Kingfisher */,
 			);
 			productName = YegriTunesSearchEX;
 			productReference = 68CED2872C65C0220043266A /* YegriTunesSearchEX.app */;
@@ -191,6 +194,7 @@
 			packageReferences = (
 				68CED29E2C65C0D60043266A /* XCRemoteSwiftPackageReference "SnapKit" */,
 				68CED2A12C65C0E60043266A /* XCRemoteSwiftPackageReference "RxSwift" */,
+				68CED2C02C65FC8D0043266A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 68CED2882C65C0220043266A /* Products */;
 			projectDirPath = "";
@@ -466,6 +470,14 @@
 				minimumVersion = 6.7.1;
 			};
 		};
+		68CED2C02C65FC8D0043266A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -483,6 +495,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 68CED2A12C65C0E60043266A /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		68CED2C12C65FC8D0043266A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68CED2C02C65FC8D0043266A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

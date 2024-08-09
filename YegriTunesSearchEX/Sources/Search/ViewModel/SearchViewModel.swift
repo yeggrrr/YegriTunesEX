@@ -9,8 +9,8 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class SearchViewModel {
-    let disposeBag = DisposeBag()
+final class SearchViewModel {
+    private let disposeBag = DisposeBag()
     
     struct Input {
         let searchButtonTap: ControlEvent<Void>

@@ -11,7 +11,7 @@ import SnapKit
 final class SearchCell: UITableViewCell, ViewRepresentable {
     // MARK: UI
     let coverImageView = UIImageView()
-    let nameStackView = UIStackView()
+    private let nameStackView = UIStackView()
     let booknameLabel = UILabel()
     let artistNameLabel = UILabel()
     let previewButton = UIButton()

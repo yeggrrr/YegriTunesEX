@@ -79,9 +79,10 @@ final class SearchCell: UITableViewCell, ViewRepresentable {
         coverImageView.clipsToBounds = true
         
         // previewButton
+        previewButton.backgroundColor = .systemGray6
         previewButton.layer.borderWidth = 1
         previewButton.layer.borderColor = UIColor.black.cgColor
-        previewButton.setTitle("미리보기", for: .normal)
+        previewButton.setTitle("받기", for: .normal)
         previewButton.setTitleColor(.black, for: .normal)
     }
 }

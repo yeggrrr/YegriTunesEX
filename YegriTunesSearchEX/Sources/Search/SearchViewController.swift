@@ -54,11 +54,19 @@ final class SearchViewController: UIViewController {
             .bind(to: tableView.rx.items(cellIdentifier: SearchCell.id, cellType: SearchCell.self)) { (row, element, cell) in
                 cell.booknameLabel.text = element.collectionName
                 cell.artistNameLabel.text = element.artistName
-                if let imageURL = URL(string: element.artworkUrl100) {
-                    cell.coverImageView.kf.setImage(with: imageURL)
+                
+                let imageString = self.setCoverImage(imageURL: element.artworkUrl100)
+                if let imageURL = URL(string: imageString) {
+                    cell.coverImageView.kf.setImage(with: imageURL, options: [.transition(.fade(0.5))])
                 }
             }
             .disposed(by: disposeBag)
     }
+    
+    func setCoverImage(imageURL: String) -> String {
+        let removeSize = imageURL.components(separatedBy: "100x100bb.jpg")
+            .joined()
+        let addNewSize = removeSize + "1000x1000bb.jpg"
+        return addNewSize
+    }
 }
-

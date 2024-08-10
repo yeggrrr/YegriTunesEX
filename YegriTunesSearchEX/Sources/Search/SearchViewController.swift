@@ -52,21 +52,24 @@ final class SearchViewController: UIViewController {
         
         output.bookList
             .bind(to: tableView.rx.items(cellIdentifier: SearchCell.id, cellType: SearchCell.self)) { (row, element, cell) in
-                cell.booknameLabel.text = element.collectionName
-                cell.artistNameLabel.text = element.artistName
-                
                 let imageString = self.setCoverImage(imageURL: element.artworkUrl100)
                 if let imageURL = URL(string: imageString) {
                     cell.coverImageView.kf.setImage(with: imageURL, options: [.transition(.fade(0.5))])
                 }
+                cell.booknameLabel.text = element.collectionName
+                cell.artistNameLabel.text = element.artistName
             }
             .disposed(by: disposeBag)
-    }
-    
-    func setCoverImage(imageURL: String) -> String {
-        let removeSize = imageURL.components(separatedBy: "100x100bb.jpg")
-            .joined()
-        let addNewSize = removeSize + "1000x1000bb.jpg"
-        return addNewSize
+        
+        
+        Observable.zip(tableView.rx.itemSelected, tableView.rx.modelSelected(SearchModel.Results.self))
+            .subscribe(with: self) { owner, value in
+                owner.tableView.deselectRow(at: value.0, animated: true)
+                let vc = DetailViewController()
+                vc.bind()
+                vc.detailData.onNext(value.1)
+                owner.navigationController?.pushViewController(vc, animated: true)
+            }
+            .disposed(by: disposeBag)
     }
 }

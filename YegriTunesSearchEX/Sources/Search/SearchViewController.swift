@@ -32,15 +32,23 @@ final class SearchViewController: UIViewController {
     private func configure() {
         // view
         view.backgroundColor = .white
+        
+        // navigation
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = .systemBrown
+        
         // addSubview
         view.addSubviews([searchBar, tableView])
+        
         // constraints
         navigationItem.titleView = searchBar
+        searchBar.placeholder = "책 제목을 입력해주세요"
+        
         tableView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.horizontalEdges.bottom.equalToSuperview()
         }
-        
+    
         tableView.rowHeight = 90
         tableView.register(SearchCell.self, forCellReuseIdentifier: SearchCell.id)
     }
@@ -67,7 +75,7 @@ final class SearchViewController: UIViewController {
                 owner.tableView.deselectRow(at: value.0, animated: true)
                 let vc = DetailViewController()
                 vc.bind()
-                vc.detailData.onNext(value.1)
+                vc.viewModel.detailData.onNext(value.1)
                 owner.navigationController?.pushViewController(vc, animated: true)
             }
             .disposed(by: disposeBag)

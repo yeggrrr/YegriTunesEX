@@ -15,8 +15,6 @@ final class DetailViewController: UIViewController {
     let detailView = DetailView()
     
     // MARK: Properties
-    var detailData = PublishSubject<SearchModel.Results>()
-    
     let viewModel = DetailViewModel()
     let disposeBag = DisposeBag()
     
@@ -36,8 +34,8 @@ final class DetailViewController: UIViewController {
         view.backgroundColor = .white
     }
     
-    func bind() {
-        detailData
+    func bind() {        
+        viewModel.detailData
             .subscribe(with: self) { owner, value in
                 owner.navigationItem.title = value.collectionName
                 owner.detailView.genreLabel.text = value.primaryGenreName

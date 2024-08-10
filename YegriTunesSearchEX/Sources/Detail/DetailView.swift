@@ -77,7 +77,7 @@ final class DetailView: UIView, ViewRepresentable {
         scrollView.snp.makeConstraints {
             $0.top.equalTo(genreView.snp.bottom).offset(10)
             $0.horizontalEdges.equalTo(safeArea).inset(20)
-            $0.bottom.equalTo(safeArea).offset(-20)
+            $0.bottom.equalToSuperview()
         }
         
         contentView.snp.makeConstraints {
@@ -142,8 +142,9 @@ final class DetailView: UIView, ViewRepresentable {
     }
     
     func configureUI() {
-        artistUnderscoreView.setUI(bgColor: .systemBrown)
-        bookUnderscoreView.setUI(bgColor: .systemBrown)
+        scrollView.showsVerticalScrollIndicator = false
+        artistUnderscoreView.backgroundColor = .systemBrown
+        bookUnderscoreView.backgroundColor = .systemBrown
         genreView.setUI(bgColor: .systemBrown)
         descriptionTitleView.setUI()
         

@@ -12,18 +12,16 @@ final class DetailView: UIView, ViewRepresentable {
     let coverImageView = UIImageView()
     private let genreView = UIView()
     let genreLabel = UILabel()
+    private let scrollView = UIScrollView()
+    private let contentView = UIView()
     private let artistNameLabel = UILabel()
     let artistNameInfoLabel = UILabel()
     private let artistUnderscoreView = UIView()
     private let bookNameLabel = UILabel()
     let bookNameInfoLabel = UILabel()
     private let bookUnderscoreView = UIView()
-    
     private let descriptionTitleView = UIView()
     private let descriptionTitleLabel = UILabel()
-    
-    private let scrollView = UIScrollView()
-    private let contentView = UIView()
     let descriptionLabel = UILabel()
     
     override init(frame: CGRect) {
@@ -38,9 +36,19 @@ final class DetailView: UIView, ViewRepresentable {
     
     func addSubviews() {
         addSubviews([coverImageView, genreView])
+        
         addSubview(scrollView)
         scrollView.addSubview(contentView)
-        contentView.addSubviews([ artistNameLabel, artistNameInfoLabel, artistUnderscoreView, bookNameLabel, bookNameInfoLabel, bookUnderscoreView, descriptionTitleView, descriptionLabel])
+        contentView.addSubviews([
+            artistNameLabel,
+            artistNameInfoLabel,
+            artistUnderscoreView,
+            bookNameLabel,
+            bookNameInfoLabel,
+            bookUnderscoreView,
+            descriptionTitleView,
+            descriptionLabel])
+        
         descriptionTitleView.addSubview(descriptionTitleLabel)
         genreView.addSubview(genreLabel)
     }
@@ -134,39 +142,42 @@ final class DetailView: UIView, ViewRepresentable {
     }
     
     func configureUI() {
-        // UI
-        genreView.backgroundColor = .systemBrown
-        genreView.layer.cornerRadius = 10
-        genreLabel.font = .systemFont(ofSize: 16, weight: .bold)
-        genreLabel.textAlignment = .center
+        artistUnderscoreView.setUI(bgColor: .systemBrown)
+        bookUnderscoreView.setUI(bgColor: .systemBrown)
+        genreView.setUI(bgColor: .systemBrown)
+        descriptionTitleView.setUI()
         
-        artistNameLabel.text = "작가 이름"
-        artistNameLabel.font = .systemFont(ofSize: 17, weight: .bold)
+        genreLabel.setUI(
+            fontStyle: .systemFont(ofSize: 16, weight: .bold),
+            txtAlignment: .center)
         
-        artistNameInfoLabel.numberOfLines = 0
-        artistNameInfoLabel.textColor = .darkGray
-        artistNameInfoLabel.font = .systemFont(ofSize: 17, weight: .semibold)
+        artistNameLabel.setUI(
+            txt: "작가 이름",
+            fontStyle: .systemFont(ofSize: 17, weight: .bold))
         
-        artistUnderscoreView.backgroundColor = .systemBrown
+        artistNameInfoLabel.setUI(
+            txtColor: .darkGray,
+            numOfLines: 0,
+            fontStyle: .systemFont(ofSize: 17, weight: .semibold))
         
-        bookNameLabel.text = "책 이름"
-        bookNameLabel.font = .systemFont(ofSize: 17, weight: .bold)
+        bookNameLabel.setUI(
+            txt: "책 이름",
+            fontStyle: .systemFont(ofSize: 17, weight: .bold))
         
-        bookNameInfoLabel.numberOfLines = 0
-        bookNameInfoLabel.textColor = .darkGray
-        bookNameInfoLabel.font = .systemFont(ofSize: 17, weight: .semibold)
+        bookNameInfoLabel.setUI(
+            txtColor: .darkGray,
+            numOfLines: 0,
+            fontStyle: .systemFont(ofSize: 17, weight: .semibold))
         
-        bookUnderscoreView.backgroundColor = .systemBrown
+        descriptionTitleLabel.setUI(
+            txt: "작품 줄거리",
+            fontStyle: .systemFont(ofSize: 17, weight: .bold),
+            txtAlignment: .center)
         
-        descriptionTitleView.layer.borderWidth = 2
-        descriptionTitleView.layer.borderColor = UIColor.systemBrown.cgColor
-        descriptionTitleView.layer.cornerRadius = 10
-        
-        descriptionTitleLabel.text = "작품 줄거리"
-        descriptionTitleLabel.textAlignment = .center
-        descriptionTitleLabel.font = .systemFont(ofSize: 17, weight: .bold)
-        
-        descriptionLabel.textAlignment = .left
-        descriptionLabel.numberOfLines = 0
+        descriptionLabel.setUI(
+            txtColor: .darkGray,
+            numOfLines: 0,
+            fontStyle: .systemFont(ofSize: 17, weight: .semibold),
+            txtAlignment: .left)
     }
 }

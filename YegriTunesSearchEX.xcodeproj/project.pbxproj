@@ -27,6 +27,7 @@
 		68CED2CA2C6726EF0043266A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2C92C6726EF0043266A /* DetailView.swift */; };
 		68CED2CC2C6739E50043266A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2CB2C6739E50043266A /* DetailViewModel.swift */; };
 		68CED2CE2C6743420043266A /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2CD2C6743420043266A /* UIViewController+.swift */; };
+		68CED2D02C6750C10043266A /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2CF2C6750C10043266A /* UILabel+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		68CED2C92C6726EF0043266A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		68CED2CB2C6739E50043266A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		68CED2CD2C6743420043266A /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		68CED2CF2C6750C10043266A /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				68CED2A92C65C4E00043266A /* View+.swift */,
 				68CED2CD2C6743420043266A /* UIViewController+.swift */,
+				68CED2CF2C6750C10043266A /* UILabel+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				68CED28F2C65C0220043266A /* SearchViewController.swift in Sources */,
 				68CED2CC2C6739E50043266A /* DetailViewModel.swift in Sources */,
 				68CED28B2C65C0220043266A /* AppDelegate.swift in Sources */,
+				68CED2D02C6750C10043266A /* UILabel+.swift in Sources */,
 				68CED28D2C65C0220043266A /* SceneDelegate.swift in Sources */,
 				68CED2B22C65CB950043266A /* ViewRepresentable.swift in Sources */,
 			);

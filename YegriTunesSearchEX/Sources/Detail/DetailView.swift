@@ -10,6 +10,7 @@ import SnapKit
 
 final class DetailView: UIView, ViewRepresentable {
     let coverImageView = UIImageView()
+    let previewButton = UIButton(type: .system)
     private let genreView = UIView()
     let genreLabel = UILabel()
     private let scrollView = UIScrollView()
@@ -35,7 +36,7 @@ final class DetailView: UIView, ViewRepresentable {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     func addSubviews() {
-        addSubviews([coverImageView, genreView])
+        addSubviews([coverImageView, genreView, previewButton])
         
         addSubview(scrollView)
         scrollView.addSubview(contentView)
@@ -61,6 +62,12 @@ final class DetailView: UIView, ViewRepresentable {
         coverImageView.snp.makeConstraints {
             $0.top.horizontalEdges.equalTo(safeArea).inset(20)
             $0.height.equalTo(coverImageView.snp.width)
+        }
+        
+        previewButton.snp.makeConstraints {
+            $0.top.equalTo(coverImageView.snp.top).offset(5)
+            $0.trailing.equalTo(coverImageView.snp.trailing).offset(-5)
+            $0.height.width.equalTo(40)
         }
         
         genreView.snp.makeConstraints {
@@ -147,6 +154,7 @@ final class DetailView: UIView, ViewRepresentable {
         bookUnderscoreView.backgroundColor = .systemBrown
         genreView.setUI(bgColor: .systemBrown)
         descriptionTitleView.setUI()
+        previewButton.setUI(image: "headphones")
         
         genreLabel.setUI(
             fontStyle: .systemFont(ofSize: 16, weight: .bold),

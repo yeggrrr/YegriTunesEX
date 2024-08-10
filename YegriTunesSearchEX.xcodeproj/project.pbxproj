@@ -28,6 +28,8 @@
 		68CED2CE2C6743420043266A /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2CD2C6743420043266A /* UIViewController+.swift */; };
 		68CED2D02C6750C10043266A /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2CF2C6750C10043266A /* UILabel+.swift */; };
 		68CED2D52C6775930043266A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2D42C6775930043266A /* DetailViewModel.swift */; };
+		68CED2D72C6788E90043266A /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2D62C6788E90043266A /* UIButton+.swift */; };
+		68CED2DA2C678C7B0043266A /* AudioBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2D92C678C7B0043266A /* AudioBookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		68CED2CD2C6743420043266A /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		68CED2CF2C6750C10043266A /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		68CED2D42C6775930043266A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		68CED2D62C6788E90043266A /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		68CED2D92C678C7B0043266A /* AudioBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 				68CED2A92C65C4E00043266A /* View+.swift */,
 				68CED2CD2C6743420043266A /* UIViewController+.swift */,
 				68CED2CF2C6750C10043266A /* UILabel+.swift */,
+				68CED2D62C6788E90043266A /* UIButton+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				68CED2A82C65C4BD0043266A /* Extension */,
 				68CED2AD2C65C98F0043266A /* Search */,
 				68CED2C32C6608F70043266A /* Detail */,
+				68CED2D82C6789A40043266A /* AudioBook */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -186,6 +192,14 @@
 				68CED2B92C65D64B0043266A /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		68CED2D82C6789A40043266A /* AudioBook */ = {
+			isa = PBXGroup;
+			children = (
+				68CED2D92C678C7B0043266A /* AudioBookViewController.swift */,
+			);
+			path = AudioBook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +286,7 @@
 				68CED2CE2C6743420043266A /* UIViewController+.swift in Sources */,
 				68CED2C52C66090D0043266A /* DetailViewController.swift in Sources */,
 				68CED2CA2C6726EF0043266A /* DetailView.swift in Sources */,
+				68CED2DA2C678C7B0043266A /* AudioBookViewController.swift in Sources */,
 				68CED2AA2C65C4E00043266A /* View+.swift in Sources */,
 				68CED2B82C65D5460043266A /* ReusableProtocol.swift in Sources */,
 				68CED2BF2C65DBDB0043266A /* NetworkManager.swift in Sources */,
@@ -284,6 +299,7 @@
 				68CED28D2C65C0220043266A /* SceneDelegate.swift in Sources */,
 				68CED2D52C6775930043266A /* DetailViewModel.swift in Sources */,
 				68CED2B22C65CB950043266A /* ViewRepresentable.swift in Sources */,
+				68CED2D72C6788E90043266A /* UIButton+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

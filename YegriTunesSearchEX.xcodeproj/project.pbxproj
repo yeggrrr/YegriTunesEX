@@ -32,6 +32,7 @@
 		68CED2DA2C678C7B0043266A /* AudioBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2D92C678C7B0043266A /* AudioBookViewController.swift */; };
 		68CED2E02C68AB1A0043266A /* RecentSearchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2DF2C68AB1A0043266A /* RecentSearchesCell.swift */; };
 		68CED2EA2C69EBD50043266A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 68CED2E92C69EBD50043266A /* Alamofire */; };
+		68CED2EC2C69EFC50043266A /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2EB2C69EFC50043266A /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		68CED2D62C6788E90043266A /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		68CED2D92C678C7B0043266A /* AudioBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookViewController.swift; sourceTree = "<group>"; };
 		68CED2DF2C68AB1A0043266A /* RecentSearchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchesCell.swift; sourceTree = "<group>"; };
+		68CED2EB2C69EFC50043266A /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			children = (
 				68CED2B12C65CB950043266A /* ViewRepresentable.swift */,
 				68CED2B72C65D5460043266A /* ReusableProtocol.swift */,
+				68CED2EB2C69EFC50043266A /* BaseViewModel.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				68CED28F2C65C0220043266A /* SearchViewController.swift in Sources */,
 				68CED28B2C65C0220043266A /* AppDelegate.swift in Sources */,
 				68CED2D02C6750C10043266A /* UILabel+.swift in Sources */,
+				68CED2EC2C69EFC50043266A /* BaseViewModel.swift in Sources */,
 				68CED28D2C65C0220043266A /* SceneDelegate.swift in Sources */,
 				68CED2D52C6775930043266A /* DetailViewModel.swift in Sources */,
 				68CED2B22C65CB950043266A /* ViewRepresentable.swift in Sources */,

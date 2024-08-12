@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class DetailViewModel {
+final class DetailViewModel: BaseViewModel {
     var detailData = PublishSubject<SearchModel.Results>()
     
     struct Input {

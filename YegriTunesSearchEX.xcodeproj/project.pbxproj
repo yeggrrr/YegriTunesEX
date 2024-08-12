@@ -30,6 +30,8 @@
 		68CED2D52C6775930043266A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2D42C6775930043266A /* DetailViewModel.swift */; };
 		68CED2D72C6788E90043266A /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2D62C6788E90043266A /* UIButton+.swift */; };
 		68CED2DA2C678C7B0043266A /* AudioBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2D92C678C7B0043266A /* AudioBookViewController.swift */; };
+		68CED2E02C68AB1A0043266A /* RecentSearchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2DF2C68AB1A0043266A /* RecentSearchesCell.swift */; };
+		68CED2EA2C69EBD50043266A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 68CED2E92C69EBD50043266A /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,7 @@
 		68CED2D42C6775930043266A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		68CED2D62C6788E90043266A /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		68CED2D92C678C7B0043266A /* AudioBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookViewController.swift; sourceTree = "<group>"; };
+		68CED2DF2C68AB1A0043266A /* RecentSearchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68CED2EA2C69EBD50043266A /* Alamofire in Frameworks */,
 				68CED2C22C65FC8D0043266A /* Kingfisher in Frameworks */,
 				68CED2A52C65C0E60043266A /* RxSwift in Frameworks */,
 				68CED2A32C65C0E60043266A /* RxCocoa in Frameworks */,
@@ -135,10 +139,11 @@
 		68CED2AD2C65C98F0043266A /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				68CED2E22C68AE0C0043266A /* Model */,
 				68CED28E2C65C0220043266A /* SearchViewController.swift */,
-				68CED2C62C660D150043266A /* Model */,
-				68CED2C72C660D200043266A /* View */,
-				68CED2C82C660D350043266A /* ViewModel */,
+				68CED2B32C65D3770043266A /* SearchCell.swift */,
+				68CED2B92C65D64B0043266A /* SearchViewModel.swift */,
+				68CED2E12C68AC680043266A /* RecentSearches */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -170,36 +175,28 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		68CED2C62C660D150043266A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				68CED2BB2C65D65D0043266A /* SearchModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		68CED2C72C660D200043266A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				68CED2B32C65D3770043266A /* SearchCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		68CED2C82C660D350043266A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				68CED2B92C65D64B0043266A /* SearchViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		68CED2D82C6789A40043266A /* AudioBook */ = {
 			isa = PBXGroup;
 			children = (
 				68CED2D92C678C7B0043266A /* AudioBookViewController.swift */,
 			);
 			path = AudioBook;
+			sourceTree = "<group>";
+		};
+		68CED2E12C68AC680043266A /* RecentSearches */ = {
+			isa = PBXGroup;
+			children = (
+				68CED2DF2C68AB1A0043266A /* RecentSearchesCell.swift */,
+			);
+			path = RecentSearches;
+			sourceTree = "<group>";
+		};
+		68CED2E22C68AE0C0043266A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				68CED2BB2C65D65D0043266A /* SearchModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +220,7 @@
 				68CED2A22C65C0E60043266A /* RxCocoa */,
 				68CED2A42C65C0E60043266A /* RxSwift */,
 				68CED2C12C65FC8D0043266A /* Kingfisher */,
+				68CED2E92C69EBD50043266A /* Alamofire */,
 			);
 			productName = YegriTunesSearchEX;
 			productReference = 68CED2872C65C0220043266A /* YegriTunesSearchEX.app */;
@@ -256,6 +254,7 @@
 				68CED29E2C65C0D60043266A /* XCRemoteSwiftPackageReference "SnapKit" */,
 				68CED2A12C65C0E60043266A /* XCRemoteSwiftPackageReference "RxSwift" */,
 				68CED2C02C65FC8D0043266A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				68CED2E82C69EBD50043266A /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 68CED2882C65C0220043266A /* Products */;
 			projectDirPath = "";
@@ -289,6 +288,7 @@
 				68CED2DA2C678C7B0043266A /* AudioBookViewController.swift in Sources */,
 				68CED2AA2C65C4E00043266A /* View+.swift in Sources */,
 				68CED2B82C65D5460043266A /* ReusableProtocol.swift in Sources */,
+				68CED2E02C68AB1A0043266A /* RecentSearchesCell.swift in Sources */,
 				68CED2BF2C65DBDB0043266A /* NetworkManager.swift in Sources */,
 				68CED2BA2C65D64B0043266A /* SearchViewModel.swift in Sources */,
 				68CED2BC2C65D65D0043266A /* SearchModel.swift in Sources */,
@@ -546,6 +546,14 @@
 				minimumVersion = 7.12.0;
 			};
 		};
+		68CED2E82C69EBD50043266A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -568,6 +576,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 68CED2C02C65FC8D0043266A /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		68CED2E92C69EBD50043266A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68CED2E82C69EBD50043266A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

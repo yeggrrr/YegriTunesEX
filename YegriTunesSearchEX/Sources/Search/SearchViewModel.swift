@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class SearchViewModel {
+final class SearchViewModel: BaseViewModel {
     private let disposeBag = DisposeBag()
     
     struct Input {
@@ -30,6 +30,9 @@ final class SearchViewModel {
             .distinctUntilChanged()
             .flatMap { value in
                 NetworkManager.shared.callRequest(query: value)
+                    .catch { error in
+                        return Single<SearchModel>.never()
+                    }
             }
             .subscribe(with: self, onNext: { owner, bookData in
                 bookList.onNext(bookData.results)
